@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectInfo>
+    <Name>DST ETL Process</Name>
+    <LastWriteTime>2018-10-23T16:52:32.8797574Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+  </ProjectInfo>
+  <LastBuildInfos>
+    <ProjectBuildItemInfo>
+      <Name>P0011 - Zoopla SALE.dtsx</Name>
+      <LastWriteTime>2018-05-17T13:59:22.2131404Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>P0011 - RegionalTransport Vehicle Position.dtsx</Name>
+      <LastWriteTime>2018-08-01T11:15:59.4513755Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>P0011 - RegionalTransport Ticket Sales.dtsx</Name>
+      <LastWriteTime>2018-08-15T16:04:29.5314841Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>P0162 - PostcodedLocations.dtsx</Name>
+      <LastWriteTime>2018-06-12T14:19:12.3363763Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>P0162 - TableMigration.dtsx</Name>
+      <LastWriteTime>2018-06-20T16:31:59.2124277Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>P0162 - MoreLife.dtsx</Name>
+      <LastWriteTime>2018-06-20T16:22:01.0698063Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>P0011 - Bounts.dtsx</Name>
+      <LastWriteTime>2018-06-22T14:53:40.3335867Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>P0011 - LINK.dtsx</Name>
+      <LastWriteTime>2018-06-28T10:50:19.4512031Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>P0162 - ActiveInspiration.dtsx</Name>
+      <LastWriteTime>2018-08-08T09:33:40.9126392Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>P0043 - TPP.dtsx</Name>
+      <LastWriteTime>2018-10-23T16:52:32.6108036Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+  </LastBuildInfos>
+</BuildLog>

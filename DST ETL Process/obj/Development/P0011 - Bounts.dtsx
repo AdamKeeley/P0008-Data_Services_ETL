@@ -1,0 +1,1465 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/22/2018 2:37:33 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="IRC-GATE01"
+  DTS:CreatorName="IRC\uitake"
+  DTS:DTSID="{F3E9091E-A561-4DEB-AA2D-DA6FB93678B1}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.1000.169"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="P0011 - Bounts"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{8D388E35-1B43-4E53-8665-C28E34A6C68B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Activity.csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EF84ECBB-6B1C-4874-88F4-DDCD7C0F1A5A}"
+      DTS:ObjectName="Activity.csv">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::varFileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sl_No"
+              DTS:DTSID="{AB726E23-34E6-47C0-B293-71AED8125578}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UserID"
+              DTS:DTSID="{BABF9439-DE38-4E59-9674-14E7801DB94E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Username"
+              DTS:DTSID="{F447C230-2242-4F3C-8655-54912BF953AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{097044EC-9C33-4201-ACEE-B97825C6FF68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="App_Source"
+              DTS:DTSID="{C31B36BC-FEDA-4962-9B81-825E7EF0E619}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Distance_Travelled"
+              DTS:DTSID="{D79C15B3-84BF-4119-A3DF-6C151A998B80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Activity_Type"
+              DTS:DTSID="{3405107A-C7C8-450F-9645-B846F682960B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Activity_Duration"
+              DTS:DTSID="{849AC285-3C71-4EBC-B1D0-3C5569BDF4A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Steps"
+              DTS:DTSID="{6B756536-53E9-4D6D-A5C1-BCC8C6FA754B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="meps"
+              DTS:DTSID="{3361D67A-B88B-447D-A539-67A0FDA7A019}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Average_Speed"
+              DTS:DTSID="{A8559EB0-0431-4610-A241-721B9E4D2C9E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Anonymous User.csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4CA9332D-68CC-458A-A021-D5E73EF9D045}"
+      DTS:ObjectName="Anonymous User.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\v0014-sql01\Shared\CDRC Data\Active Inspiration\Anonymous User\Anonymous_UserData_17_01_17.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sl_No"
+              DTS:DTSID="{592681D2-0643-4664-9945-23AD1873B4D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UserID"
+              DTS:DTSID="{5A4E8ED1-1C1D-4770-BE3C-261F6F59F284}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Username"
+              DTS:DTSID="{5F64EC87-7897-49ED-82A5-723A4873868E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{03E33D61-5570-4740-A697-2BA8F8E6B4F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Postcode"
+              DTS:DTSID="{2CB2D61E-38A6-4F85-B845-5F68FAEAEE1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year_of_birth"
+              DTS:DTSID="{49E373C6-EEE7-4481-8AA2-91B5F97C0678}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[V0014-SQL01.CDRC]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9B9A401C-5F20-407A-9B09-90FC2F478AA7}"
+      DTS:ObjectName="V0014-SQL01.CDRC">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=V0014-SQL01;Initial Catalog=CDRC;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A61BDD73-F76F-428B-9606-7B44C4AD54EB}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varFileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Controlled_Anonymous_User"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D0E24E8B-78CF-4F33-BED2-1903AC89E736}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Controlled_Anonymous_User"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Controlled_Anonymous_User\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Controlled_Anonymous_User\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Anonymous User.csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[Anonymous User.csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[UserID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UserID]"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[UserID]"
+                      name="UserID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Username]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Username]"
+                      length="50"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Username]"
+                      name="Username"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      length="15"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Postcode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Postcode]"
+                      length="5"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Postcode]"
+                      name="Postcode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Sl_No]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sl_No]"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Sl_No]"
+                      name="Sl_No"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Year_of_birth]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year_of_birth]"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Year_of_birth]"
+                      name="Year_of_birth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UserID]"
+                      dataType="i4"
+                      name="UserID" />
+                    <externalMetadataColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Username]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Username" />
+                    <externalMetadataColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Postcode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Postcode" />
+                    <externalMetadataColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sl_No]"
+                      dataType="i4"
+                      name="Sl_No" />
+                    <externalMetadataColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year_of_birth]"
+                      dataType="i4"
+                      name="Year_of_birth" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Controlled_Anonymous_User\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[ai].[Controlled_Anonymous_User]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Controlled_Anonymous_User\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[V0014-SQL01.CDRC]"
+                  connectionManagerRefId="Package.ConnectionManagers[V0014-SQL01.CDRC]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UserID]"
+                      cachedDataType="i4"
+                      cachedName="UserID"
+                      externalMetadataColumnId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UserID]"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[UserID]" />
+                    <inputColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Username]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Username"
+                      externalMetadataColumnId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Username]"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Username]" />
+                    <inputColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Postcode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Postcode"
+                      externalMetadataColumnId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode]"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Postcode]" />
+                    <inputColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Year_of_birth]"
+                      cachedDataType="i4"
+                      cachedName="Year_of_birth"
+                      externalMetadataColumnId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year_Of_Birth]"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Year_of_birth]" />
+                    <inputColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sl_No]"
+                      cachedDataType="i4"
+                      cachedName="Sl_No"
+                      externalMetadataColumnId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SI_No]"
+                      lineageId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output].Columns[Sl_No]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SI_No]"
+                      dataType="i4"
+                      name="SI_No" />
+                    <externalMetadataColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UserID]"
+                      dataType="i4"
+                      name="UserID" />
+                    <externalMetadataColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Username]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Username" />
+                    <externalMetadataColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Postcode" />
+                    <externalMetadataColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year_Of_Birth]"
+                      dataType="i4"
+                      name="Year_Of_Birth" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Controlled_Anonymous_User\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Controlled_Anonymous_User\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Controlled_Anonymous_User\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Controlled_Anonymous_User\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Controlled_Anonymous_User.Paths[Flat File Source Output]"
+              endId="Package\Controlled_Anonymous_User\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Controlled_Anonymous_User\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{5512C552-74DD-485C-9DB4-4E91C77CEBB3}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{7FB004A0-C7F8-4F0B-A0C2-715E7FA597F1}"
+        DTS:ObjectName="{7FB004A0-C7F8-4F0B-A0C2-715E7FA597F1}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="\\v0014-sql01\Shared\CDRC Data\Active Inspiration\Activity" />
+            <FEFEProperty
+              FileSpec="*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Controlled_Activity"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{2C62F7DA-6B55-49D5-A0DD-FE69D74DBC59}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Controlled_Activity"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="2057"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Activity.csv]"
+                      connectionManagerRefId="Package.ConnectionManagers[Activity.csv]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Sl_No]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sl_No]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Sl_No]"
+                          name="Sl_No"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[UserID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UserID]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[UserID]"
+                          name="UserID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Username]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Username]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Username]"
+                          name="Username"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                          name="Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[App_Source]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[App_Source]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[App_Source]"
+                          name="App_Source"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Distance_Travelled]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Distance_Travelled]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Distance_Travelled]"
+                          name="Distance_Travelled"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Activity_Type]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Activity_Type]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Activity_Type]"
+                          name="Activity_Type"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Activity_Duration]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Activity_Duration]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Activity_Duration]"
+                          name="Activity_Duration"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Steps]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Steps]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Steps]"
+                          name="Steps"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[meps]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[meps]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[meps]"
+                          name="meps"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Average_Speed]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Average_Speed]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Average_Speed]"
+                          name="Average_Speed"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sl_No]"
+                          dataType="i4"
+                          name="Sl_No" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UserID]"
+                          dataType="i4"
+                          name="UserID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Username]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Username" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          dataType="dbTimeStamp"
+                          name="Date" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[App_Source]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="App_Source" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Distance_Travelled]"
+                          dataType="r4"
+                          name="Distance_Travelled" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Activity_Type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Activity_Type" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Activity_Duration]"
+                          dataType="i4"
+                          name="Activity_Duration" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Steps]"
+                          dataType="i4"
+                          name="Steps" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[meps]"
+                          dataType="i4"
+                          name="meps" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Average_Speed]"
+                          dataType="r4"
+                          name="Average_Speed" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[ai].[Controlled_Activity]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[V0014-SQL01.CDRC]"
+                      connectionManagerRefId="Package.ConnectionManagers[V0014-SQL01.CDRC]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UserID]"
+                          cachedDataType="i4"
+                          cachedName="UserID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UserID]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[UserID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Username]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Username"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Username]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Username]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="Date"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Date]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[App_Source]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="App_Source"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[App_Source]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[App_Source]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Distance_Travelled]"
+                          cachedDataType="r4"
+                          cachedName="Distance_Travelled"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Distance_Travelled]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Distance_Travelled]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Activity_Type]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Activity_Type"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Activity_Type]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Activity_Type]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Activity_Duration]"
+                          cachedDataType="i4"
+                          cachedName="Activity_Duration"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Activity_Duration]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Activity_Duration]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Steps]"
+                          cachedDataType="i4"
+                          cachedName="Steps"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Steps]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Steps]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[meps]"
+                          cachedDataType="i4"
+                          cachedName="meps"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Meps]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[meps]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Average_Speed]"
+                          cachedDataType="r4"
+                          cachedName="Average_Speed"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Average_Speed]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Average_Speed]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sl_No]"
+                          cachedDataType="i4"
+                          cachedName="Sl_No"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SI_No]"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output].Columns[Sl_No]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SI_No]"
+                          dataType="i4"
+                          name="SI_No" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UserID]"
+                          dataType="i4"
+                          name="UserID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Username]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Username" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                          dataType="dbTimeStamp"
+                          name="Date" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[App_Source]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="App_Source" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Distance_Travelled]"
+                          dataType="r8"
+                          name="Distance_Travelled" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Activity_Type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Activity_Type" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Activity_Duration]"
+                          dataType="i4"
+                          name="Activity_Duration" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Steps]"
+                          dataType="i4"
+                          name="Steps" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Meps]"
+                          dataType="i4"
+                          name="Meps" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Average_Speed]"
+                          dataType="r8"
+                          name="Average_Speed" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Controlled_Activity.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Controlled_Activity\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{B1CEC135-EA3E-4EAF-AC68-9AB83B470D21}"
+          DTS:ObjectName="{B1CEC135-EA3E-4EAF-AC68-9AB83B470D21}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::varFileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F555B12D-67DF-4B04-AD7B-8B64E654DCAE}"
+      DTS:From="Package\Controlled_Anonymous_User"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Foreach Loop Container" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Foreach Loop Container\Controlled_Activity"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,102"
+          Size="205,146"
+          Id="Package\Foreach Loop Container"
+          TopLeft="446,287" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Controlled_Anonymous_User"
+          TopLeft="442.5,166.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="549,208.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78.5"
+              Start="0,0"
+              End="0,71">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\Controlled_Activity">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination"
+          TopLeft="231,191" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Foreach Loop Container\Controlled_Activity\Flat File Source"
+          TopLeft="206,43" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Controlled_Activity.Paths[Flat File Source Output]"
+          TopLeft="281.5,85">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35,106"
+              Start="0,0"
+              End="35,98.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49"
+                    Point2="0,53"
+                    Point3="4,53" />
+                  <mssgle:LineSegment
+                    End="31,53" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31,53"
+                    Point2="35,53"
+                    Point3="35,57" />
+                  <mssgle:LineSegment
+                    End="35,98.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Controlled_Anonymous_User">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Controlled_Anonymous_User\Flat File Source"
+          TopLeft="319,95" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Controlled_Anonymous_User\OLE DB Destination"
+          TopLeft="340,259" />
+        <EdgeLayout
+          Id="Package\Controlled_Anonymous_User.Paths[Flat File Source Output]"
+          TopLeft="394.5,137">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31,122"
+              Start="0,0"
+              End="31,114.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,57"
+                    Point2="0,61"
+                    Point3="4,61" />
+                  <mssgle:LineSegment
+                    End="27,61" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27,61"
+                    Point2="31,61"
+                    Point3="31,65" />
+                  <mssgle:LineSegment
+                    End="31,114.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Controlled_Activity\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Controlled_Anonymous_User\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
